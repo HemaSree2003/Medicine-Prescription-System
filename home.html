@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert System Home Page</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('background-image.jpg') center/cover no-repeat;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 1em;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+
+        header button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        header button:hover {
+            background-color: #45a049;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            text-align: center;
+            flex: 1;
+        }
+
+        main div {
+            flex: 1;
+        }
+
+        main h2 {
+            color: #4CAF50;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        main p {
+            color: #333;
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        main a {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+
+        main a:hover {
+            background-color: #45a049;
+        }
+
+        .section {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 50px;
+            text-align: center;
+            color: #fff;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+
+        .section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .services {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+        }
+
+        .service-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+            cursor: pointer;
+            text-align: center;
+            flex: 1;
+            max-width: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .tooltip {
+            opacity: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 80%;
+            height: 100%;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10%;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        .tooltip strong {
+            color: #4CAF50;
+        }
+
+        .service-card:hover .tooltip {
+            opacity: 1;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h1>Expert System</h1>
+            <p>Your Health, Our Priority</p>
+        </div>
+        <div>
+            <button onclick="location.href='login.html'">Login</button>
+            <button onclick="location.href='register.html'">Register</button>
+            <button onclick="location.href='settings.html'">Settings</button>
+        </div>
+    </header>
+
+    <main>
+        <div>
+            <h2>Welcome to the Expert System</h2>
+            <p>
+                If you are facing any health issues or symptoms, our expert system is here to help you. Please log in and
+                provide your symptoms for personalized recommendations and prescriptions.
+            </p>
+            <a href="#services">Learn More</a>
+        </div>
+    </main>
+
+    <div class="section" id="about">
+        <h2>About Us</h2>
+        <p>
+            Welcome to the Expert System, where your health is our top priority. Our expert system is designed to analyze
+            your symptoms, provide accurate diagnoses, and offer personalized recommendations for your well-being. With a
+            comprehensive medical knowledge base, we ensure that our suggestions are safe, effective, and tailored to your
+            unique health profile.
+        </p>
+    </div>
+
+    <div class="services" id="services">
+        <div class="service-card">
+            <img src="service1.jpg" alt="Service 1">
+            <div class="tooltip">
+                <p>
+                    <strong>Personalized Diagnosis</strong>: Analyze your symptoms and provide personalized
+                    recommendations.
+                </p>
+                <p>Our system takes into account your unique medical history and conditions to offer accurate diagnoses.</p>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="service2.jpg" alt="Service 2">
+            <div class="tooltip">
+                <p>
+                    <strong>Safe Prescriptions</strong>: Receive prescriptions with safe and effective medicines.
+                </p>
+                <p>We recommend medications that are known to be safe and suitable for your health.</p>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="service3.jpg" alt="Service 3">
+            <div class="tooltip">
+                <p>
+                    <strong>Doctor Collaboration</strong>: Collaborate with healthcare professionals for complex cases.
+                </p>
+                <p>In challenging situations, our system allows collaboration with doctors to ensure the best care for you.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Expert System. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
